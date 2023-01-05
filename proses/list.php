@@ -11,20 +11,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
-    <link rel="icon" href="img/logo.jpg" type="image/x-icon"/>
+    <link rel="icon" href="../img/logo.jpg" type="image/x-icon"/>
     
     	<!-- CSS Files -->
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="atlantis.min.css">
+	<link rel="stylesheet" href="../bootstrap.min.css">
+	<link rel="stylesheet" href="../atlantis.min.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="../demo.css">
 	
 	<!-- Fonts and icons -->
-	<script src="webfont.min.js"></script>
+	<script src="../webfont.min.js"></script>
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css']},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -45,7 +45,7 @@
 
 <?php
 
-include('connection.php');
+include('../config/connection.php');
 
 ///MEMED GANTENG///
 
@@ -57,7 +57,7 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
 <body>
     <nav class= "navbar navbar-expand-lg navbar-light fixed-top card" style="background-color : white;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.jpg" width="55px"></a>
+            <a class="navbar-brand" href="#"><img src="../img/logo.jpg" width="55px"></a>
             <h2><b>RZ</b></h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -69,11 +69,11 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-lg-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php"><b>HOME</b></a>
+                        <a class="nav-link" href="../index.php"><b>HOME</b></a>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php"><b>ABOUT</b></a>
+                        <a class="nav-link" href="../about.php"><b>ABOUT</b></a>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item active">
@@ -82,11 +82,11 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
                    
                 </ul>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100074898640460"><img src="img/fb.svg" width="25px"></a>
+                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100074898640460"><img src="../img/fb.svg" width="25px"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="https://www.instagram.com/ahmad_syahputraaaa/"><img src="img/ig.svg" width="25px"></a>
+                <a class="nav-link" href="https://www.instagram.com/ahmad_syahputraaaa/"><img src="../img/ig.svg" width="25px"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="#"><img src="img/wa.svg" width="25px"></a>
+                <a class="nav-link" href="#"><img src="../img/wa.svg" width="25px"></a>
                 
                     
             </div>
@@ -102,7 +102,7 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <h4 class="page-title">Data Siswa
                           <ul class="breadcrumbs">
                             <li class="nav-home">
-                              <a href="index.php">
+                              <a href="../index.php">
                                 <i class="flaticon-home"></i>
                               </a>
                             </li>
@@ -162,7 +162,7 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     <td><?php echo $result['email']?></td>
                     <td>
                         <center>
-                    <?php echo "<img src='images/$result[foto]' width='35' height='40'>";
+                    <?php echo "<img src='../images/$result[foto]' width='35' height='40'>";
                      ?></center>
                      </td>
                         <td>
@@ -247,21 +247,20 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
             </div>
             
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="assets/js/core/popper.min.js"></script>
-	<script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
-	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 	
 	<!-- jQuery Scrollbar -->
-	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- Datatables -->
-	<script src="assets/js/plugin/datatables/datatables.min.js"></script>
+	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
 	<!-- Atlantis JS -->
-	<script src="assets/js/atlantis.min.js"></script>
+	<script src="../assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="assets/js/setting-demo2.js"></script>
 	<script >
 		$(document).ready(function() {
 			$('#basic-datatables').DataTable({

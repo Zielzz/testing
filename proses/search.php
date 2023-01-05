@@ -11,16 +11,16 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
-            <link rel="icon" href="img/logo.jpg" type="image/x-icon"/>
+            <link rel="icon" href="../img/logo.jpg" type="image/x-icon"/>
             
                 <!-- CSS Files -->
-            <link rel="stylesheet" href="bootstrap.min.css">
-            <link rel="stylesheet" href="atlantis.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/atlantis.min.css">
             <!-- CSS Just for demo purpose, don't include it in your project -->
-            <link rel="stylesheet" href="demo.css">
+            <link rel="stylesheet" href="../assets/css/demo.css">
             
             <!-- Fonts and icons -->
-            <script src="webfont.min.js"></script>
+            <script src="../assets/js/webfont.min.js"></script>
             <script>
                 WebFont.load({
                     google: {"families":["Lato:300,400,700,900"]},
@@ -44,7 +44,7 @@
 
 <?php
 
-include('connection.php');
+include('../config/connection.php');
 
 $keyword = $_GET['keyword'];
 
@@ -52,7 +52,7 @@ $query = mysqli_query($connect, "SELECT * FROM sign_in WHERE nama='$keyword'");
 $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
-    <form action="list.php" method="get">
+    <form action="../proses/list.php" method="get">
         <input type="text" name="keyword" placeholder="Keyword .." value="<?php echo $_GET['keyword']?>"/>
         <button type="submit">Search</button>
     </form>
@@ -61,7 +61,7 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
     <nav class= "navbar navbar-expand-lg navbar-light fixed-top card" style="background-color : white;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.jpg" width="55px"></a>
+            <a class="navbar-brand" href="#"><img src="../img/logo.jpg" width="55px"></a>
             <h2><b>RZ</b></h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -73,24 +73,24 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-lg-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php"><b>HOME</b></a>
+                        <a class="nav-link" href="../index.php"><b>HOME</b></a>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php"><b>ABOUT</b></a>
+                        <a class="nav-link" href="../about.php"><b>ABOUT</b></a>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a class="nav-link active" href="list.php"><b>DATA SISWA</b></a>
+                        <a class="nav-link active" href="../proses/list.php"><b>DATA SISWA</b></a>
                     </li>
                    
                 </ul>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100074898640460"><img src="img/fb.svg" width="25px"></a>
+                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100074898640460"><img src="../img/fb.svg" width="25px"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="https://www.instagram.com/ahmad_syahputraaaa/"><img src="img/ig.svg" width="25px"></a>
+                <a class="nav-link" href="https://www.instagram.com/ahmad_syahputraaaa/"><img src="../img/ig.svg" width="25px"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="#"><img src="img/wa.svg" width="25px"></a>
+                <a class="nav-link" href="#"><img src="../img/wa.svg" width="25px"></a>
                 
                     
             </div>
@@ -107,7 +107,7 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <div class="row g-0">
     <div class="col-md-4">
     <p>
-        <?php echo "<img src='images/$result[foto]' width='200' height='250'>";?>
+        <?php echo "<img src='../images/$result[foto]' width='200' height='250'>";?>
         </p>
     </div>
     <div class="col-md-8">

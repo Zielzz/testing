@@ -88,7 +88,7 @@
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a class="nav-link active" href="list.php"><b>DATA SISWA</b></a>
+                        <a class="nav-link active" href="proses/list.php"><b>DATA SISWA</b></a>
                     </li>
                    
                 </ul>
@@ -266,7 +266,7 @@
 
 
 
-                    <form class="d-flex" role="search" action="search.php" method="get">
+                    <form class="d-flex" role="search" action="proses/search.php" method="get">
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

@@ -1,6 +1,6 @@
 <?php
 
-include('connection.php');
+include('../config/connection.php');
 
 $nama = $_POST['nama'];
 $alamat = $_POST['alamat'];
@@ -25,7 +25,7 @@ else
     }else{
         if($ukuran < 1044070){		
             $xx = $rand.'_'.$filename;
-            move_uploaded_file($_FILES['foto']['tmp_name'], 'images/'.$rand.'_'.$filename);
+            move_uploaded_file($_FILES['foto']['tmp_name'], '../images/'.$rand.'_'.$filename);
             mysqli_query($connect, "INSERT INTO sign_in SET nama='$nama', alamat='$alamat', umur='$umur', jenis_kelamin='$jenis_kelamin', email='$email', foto='$xx'");
             header("Location:list.php?alert=berhasil");
         }else{

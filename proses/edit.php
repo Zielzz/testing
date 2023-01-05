@@ -1,65 +1,50 @@
-<?php
-
-include('connection.php');
-
-$id = $_GET['id'];
-
-$query = mysqli_query($connect, "SELECT * FROM sign_in WHERE id='$id' LIMIT 1");
-$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-    
 
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
-        <link rel="icon" href="img/logo.jpg" type="image/x-icon"/>
-        
-            <!-- CSS Files -->
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <link rel="stylesheet" href="atlantis.min.css">
-        <!-- CSS Just for demo purpose, don't include it in your project -->
-        <link rel="stylesheet" href="demo.css">
-        
-        <!-- Fonts and icons -->
-        <script src="webfont.min.js"></script>
-        <script>
-            WebFont.load({
-                google: {"families":["Lato:300,400,700,900"]},
-                custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css']},
-                active: function() {
-                    sessionStorage.fonts = true;
-                }
-            });
-        </script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
+            <link rel="icon" href="../img/logo.jpg" type="image/x-icon"/>
+            
+                <!-- CSS Files -->
+            <link rel="stylesheet" href="../bootstrap.min.css">
+            <link rel="stylesheet" href="../atlantis.min.css">
+            <!-- CSS Just for demo purpose, don't include it in your project -->
+            <link rel="stylesheet" href="../demo.css">
+            
+            <!-- Fonts and icons -->
+            <script src="../webfont.min.js"></script>
+            <script>
+                WebFont.load({
+                    google: {"families":["Lato:300,400,700,900"]},
+                    custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+                    active: function() {
+                        sessionStorage.fonts = true;
+                    }
+                });
+            </script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-        <!-- <script type="text/javascript"  href="https://code.jquery.com/jquery-3.5.1.js"> </script> -->
+            <!-- <script type="text/javascript"  href="https://code.jquery.com/jquery-3.5.1.js"> </script> -->
 
-        <script type="text/javascript"  src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript"  src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+            <script type="text/javascript"  src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript"  src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     </head>
-
 
 
     <body>
         <br><br>
-
-
         <nav class= "navbar navbar-expand-lg navbar-light fixed-top card" style="background-color : white;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.jpg" width="55px"></a>
+            <a class="navbar-brand" href="#"><img src="../img/logo.jpg" width="55px"></a>
             <h2><b>RZ</b></h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -71,24 +56,24 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-lg-3">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php"><b>HOME</b></a>
+                        <a class="nav-link active" href="../index.php"><b>HOME</b></a>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.php"><b>ABOUT</b></a>
+                        <a class="nav-link active" href="../about.php"><b>ABOUT</b></a>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item active">
-                        <a class="nav-link active" href="list.php"><b>DATA SISWA</b></a>
+                        <a class="nav-link" href="../proses/list.php"><b>DATA SISWA</b></a>
                     </li>
                    
                 </ul>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100074898640460"><img src="img/fb.svg" width="25px"></a>
+                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100074898640460"><img src="../img/fb.svg" width="25px"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-link" href="https://www.instagram.com/ahmad_syahputraaaa/"><img src="img/twit.svg" width="25px"></a>
+                <a class="nav-link" href="https://www.instagram.com/ahmad_syahputraaaa/"><img src="../img/twit.svg" width="25px"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="nav-brand" href="#"><img src="img/wa.svg" width="25px"></a>
+                <a class="nav-brand" href="#"><img src="../img/wa.svg" width="25px"></a>
                 
                     
             </div>
@@ -99,10 +84,10 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
     <div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-  <h4 class="page-title">Edit Data
+  <h4 class="page-title">Tambah Data
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="index.php">
+								<a href="../index.php">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
@@ -110,13 +95,13 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="list.php">Data siswa</a>
+								<a href="../proses/list.php">Data siswa</a>
 							</li>								
              <li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="#">Edit Data</a>
+								<a href="#">Tambah Data</a>
 							</li>		
 						</ul>
             </h4>
@@ -125,13 +110,14 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<div class="card-title">Edit Data</div>
+									<div class="card-title">Tambah Data</div>
 								</div>
 								<div class="card-body">
 									<div class="row">
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<div class="col-md-6 col-lg-5">
+										<form action="insert.php" method="post"  enctype="multipart/form-data">
 											<div class="form-group">
 												<label for="nama">Nama</label>
 												<input type="text" name="nama" class="form-control"  placeholder="Nama" required>
@@ -143,14 +129,14 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 											</div>
 										
 											<div class="form-check">
-												<label>Gender</label><br/>
+												<label>Jenis Kelamin</label></br>
 												<label class="form-radio-label">
-													<input class="form-radio-input" type="radio" name="optionsRadios" value=""  checked="">
-													<span class="form-radio-sign">Male</span>
+													<input class="form-radio-input" type="radio" name="jenis_kelamin" value="Laki-Laki"  checked="">
+													<span class="form-radio-sign">Laki-Laki</span>
 												</label>
 												<label class="form-radio-label ml-3">
-													<input class="form-radio-input" type="radio" name="optionsRadios" value="">
-													<span class="form-radio-sign">Female</span>
+													<input class="form-radio-input" type="radio" name="jenis_kelamin" value="Perempuan">
+													<span class="form-radio-sign">Perempuan</span>
 												</label>
 											</div>
 											
@@ -160,6 +146,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 													<span class="form-check-sign">Agree with terms and conditions</span>
 												</label>
 											</div>
+											<button type="submit" class="btn btn-success text-light">Tambah Data</button>
 										</div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -179,29 +166,31 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                                 <input type="file" name="foto" required="required">
                                                 <p style="color: red"><b> Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif </b></p>
                                             </div>	
+											</form>
 		                                </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="assets/js/core/popper.min.js"></script>
-	<script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
-	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 	
 	<!-- jQuery Scrollbar -->
-	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- Datatables -->
-	<script src="assets/js/plugin/datatables/datatables.min.js"></script>
+	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
 	<!-- Atlantis JS -->
-	<script src="assets/js/atlantis.min.js"></script>
+	<script src="../assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="assets/js/setting-demo2.js"></script>
+	<script src="../assets/js/setting-demo2.js"></script>
 	<script >
 		$(document).ready(function() {
 			$('#basic-datatables').DataTable({
