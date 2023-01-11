@@ -120,23 +120,6 @@
   
 
   <div class="content">
-				<div class="page-inner">
-					<div class="page-header">
-  <h4 class="page-title">Home
-						<ul class="breadcrumbs">
-							<li class="nav-home">
-								<a href="index.php">
-									<i class="flaticon-home"></i>
-								</a>
-							</li>
-              <li class="separator">
-								<i class="flaticon-right-arrow"></i>
-							</li>
-							<li class="nav-item">
-								<a href="#">Home</a>
-							</li>		
-						</ul>
-            </h4>
   <div class="carousel-inner">
     <div class="carousel-item active">
     <div class="row">
